@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+
+    <script>
+      // You may want to place these lines inside an onload handler
+      CFInstall.check({
+        mode: "overlay",
+        destination: "http://www.waikiki.com"
+      });
+    </script>
+
+    <meta charset="utf-8">
+		<title> PinTweets | stuyopensource</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="description" content="PinTweets">
+		<meta name="author" content="Stuyvesant CS Community">
+
+		<!-- Le styles -->
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="bootstrap/css/bootstrap-stuy.css" rel="stylesheet">
+
+		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Le fav and touch icons -->
+		<link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-ipad3.png">                                                           
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-iphone4.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-iphone.png">
+
+		<!-- page-specific style -->
+		
+
+		<style type="text/css">
+
+			body {
+				color: #000;
+			}
+			
+			b > a {
+				color: #000;
+			}
+			
+			a:hover {
+				text-decoration: none;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- Navbar
+		================================================== -->
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="navbar-inner">
+				<ul class="nav">
+					<li class="">
+						<a href="http://stuycs-ml7.github.com//project2-results.html">Student Projects</a>
+					</li>
+					<li class="">
+						<a href="https://twitter.com/StuyvesantHigh">Twitter</a>
+					</li>
+					<li class="">
+						<a href="mailto:zamansky@gmail.com">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Masthead
+		================================================== -->
+		<header class="jumbotron">
+			<div class="row">
+				<h1 class="span6"><a href="index.html">stuyopensource</a></h1>
+			</div>
+			<div id="tagline">
+				<p>
+					Open-source projects from Stuyvesant High School's comp-sci community.
+				</p>
+			</div>
+		</header>
+
+		<script type="text/javascript">
+			
+      //TODO: Delete this? Test out on smaller screens
+      //not using jQuery because it's not available
+//			function formatTagline() {
+//				if(window.innerWidth < 768) {
+//					document.getElementById("tagline").innerHTML = "<p>Software Developer</p><p>Math Practitioner</p>"
+//				} else {
+//					document.getElementById("tagline").innerHTML = "<p>Software Developer and Math Practitioner</p>"
+//				}
+//			}
+//
+//			formatTagline();
+//			window.onresize = formatTagline;
+  	</script>
+
+		<div class="container">
+      
+      <div class="row visible-phone">
+		<p>
+			<a href="http://www.pintweets.com"><img src="img/pinTweets_full.png" /></a>	
+		</p>
+</div>
+<div class="row">
+		<p>
+		<a href="http://www.pintweets.com"><img class="hidden-phone" width="600px" height="300px" style="float: right; margin-left: 10px;" src="img/pinTweets_full.png" /></a>
+		</p>
+		<p>
+    <b><a href="http://www.pintweets.com">pintweets.com</a></b> is a hacker project I started last August. It uses Twitter's <a href="https://dev.twitter.com/docs/api/1/get/search">search</a> and <a href="https://dev.twitter.com/docs/api/1/get/users/lookup">users/lookup</a> API's, along with Google's <a href="https://developers.google.com/maps/">Maps</a> and <a href="https://developers.google.com/maps/documentation/geocoding/">Geocoding</a> API's to map the location of Tweet's based on their Tweeter's stated location.
+		</p>
+		<p>
+	  While the location's mapped are certainly not court-admissible evidence, it is a fun way to get a sense of who is tweeting what around the world. 
+		</p>
+		<p>
+    Currently front-end only, I intend to improve PinTweets by refactoring the asynchronous API calls, implementing Twitter's <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> for better cross-browser and mobile support, as well as <a href="http://rubyonrails.org/">Ruby on Rails</a> to support OAuth and serve static pages. The repo for this project is <a href="http://github.com/dvizzini/PinTweets">here</a>.
+		</p>
+    <p>
+    I started this refactoring process with <a href="https://github.com/DestroyerOfWorlds42/tweetGeocoder">Julian Cannon</a>, whom I taught at a summer course at Berkeley, along with my coinstructor <a href="https://github.com/btrump/tweetGeocoder">Blair Trump</a>. At his <a href="http://blairtrump.com">web development firm</a>, Blair implemented the algoirthm for a <a href="http://theworlddances.com/">dance website</a>.
+    </p>
+</div>
+
+  	  
+      
+	  		<div class="row">
+		  		<p>
+			  		&copy; Stuyvesant High School under MIT License. See the <a href="https://github.com/stuyopensource/PinTweets_frontEndOnly">GitHub</a>.
+			  	</p>
+			  </div>
+      
+      <br />
+		</div>
+	</body>
+</html>

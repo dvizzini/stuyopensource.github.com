@@ -1,0 +1,56 @@
+---
+link:
+layout: default
+screenshot: 'img/homepage.png'
+github: dvizzini.github.com
+description: I created <b><a href="">this site</a></b> using <a href="http://jekyllbootstrap.com/lessons/jekyll-introduction.html">Jekyll</a> and <a href="https://github.com/dvizzini/bootstrap">my fork</a> of Twitter's <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, and deployed it using <a href="https://help.github.com/articles/user-organization-and-project-pages">GitHub Pages</a>.
+weight: 5
+---
+<div class="row">
+	<div class="span2 hidden-phone" style="text-align: right;">
+    <img src="ico/apple-touch-icon-ipad3.png">
+	</div>
+	<div class="span10">
+		<p>
+      This site showcases the open-source projects of Stuyvesant High School's alumni community. Please peruse and contibute.
+		</p>
+		<p>
+		  If you are a Stuyvesant alum witha project of your own that's at least three-quarters baked, email <em>zamansky at gmail.com</em> so that it can be featured on this site.
+		</p>
+	</div>
+</div>
+<br />
+<table class="table">
+	<thead class="hidden-phone">
+		<tr>
+			<th>Link</th>
+			<th>GitHub</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+	{% for weight in (1..5) %}
+		{% for page in site.pages %}
+		
+			{% if page.weight == weight %} 
+			<tr>
+				<td height="150px" width="300px">
+					<a href="{{page.link}}"><img height="150px" width="300px" src="{{page.screenshot}}"/></a>
+				</td>
+				<td class="hidden-phone">
+					{% if page.github %}
+					<iframe src="http://ghbtns.com/github-btn.html?user=dvizzini&repo={{page.github}}&type=watch&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="50px"></iframe>
+					{% else %}
+					Closed-source
+					{% endif %}
+				</td>
+				<td class="hidden-phone">
+					{{page.description}}
+				</td>
+			</tr>
+			{% endif %}
+		
+		{% endfor %}
+	{% endfor %}
+	</tbody>
+</table>

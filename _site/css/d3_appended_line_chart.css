@@ -1,0 +1,32 @@
+.axis {
+	stroke-width: 0.8;
+	stroke: #000;
+}
+
+path {
+   stroke-width: 1.5;
+   fill: none;
+}
+
+path.current, path.highlight.current {
+	cursor: pointer;
+    stroke-width: 5.0;
+}
+
+.xLabel, .yLabel {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 11px;
+}
+
+.xTicks, .yTicks {
+	stroke-width: 0.6;
+	stroke: #000;
+}
+
+.tabnails {
+	color: #BBB !important;
+} 
+.tabs div { 
+	background-color: #BBB !important; 
+	min-height: 275px !important; 
+}
